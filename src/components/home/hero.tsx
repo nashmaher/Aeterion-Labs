@@ -2,27 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] flex flex-col overflow-hidden">
-      {/* Hero background image — on mobile, push focus to the bottom of the image (products) */}
-      <Image
-        src="https://res.cloudinary.com/djxfmxrfx/image/upload/v1774046059/9c1419ea-f705-464e-ac5c-4d9a5569150f_ixw624.jpg"
-        alt="Aeterion Labs product lineup — Ascension, Warpath, and Dominus"
-        fill
-        className="object-cover object-[center_75%] sm:object-center"
-        priority
-      />
+    <section className="relative min-h-[100svh] flex flex-col overflow-hidden bg-bg-primary">
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(200,170,110,0.08)_0%,transparent_70%)]" />
 
-      {/* Dark overlay — stronger on mobile for readability over busy product art */}
-      <div className="absolute inset-0 bg-black/60 sm:bg-black/50" />
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-primary/40 via-30% to-bg-primary/90 sm:bg-gradient-to-t sm:from-bg-primary sm:via-transparent sm:to-bg-primary/70" />
-
-      {/* Content — sits in the top portion on mobile so products show below */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-6 pt-24 pb-32 sm:pt-0 sm:pb-0 max-w-4xl mx-auto w-full">
+      {/* Content */}
+      <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-6 max-w-4xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

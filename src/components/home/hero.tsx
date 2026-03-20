@@ -10,7 +10,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Hero background image */}
       <Image
-        src="/images/hero-bg.jpg"
+        src="https://res.cloudinary.com/djxfmxrfx/image/upload/v1774046059/9c1419ea-f705-464e-ac5c-4d9a5569150f_ixw624.jpg"
         alt="Aeterion Labs product lineup — Ascension, Warpath, and Dominus"
         fill
         className="object-cover"

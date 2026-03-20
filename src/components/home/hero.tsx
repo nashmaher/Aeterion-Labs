@@ -13,13 +13,13 @@ export function Hero() {
         src="https://res.cloudinary.com/djxfmxrfx/image/upload/v1774046059/9c1419ea-f705-464e-ac5c-4d9a5569150f_ixw624.jpg"
         alt="Aeterion Labs product lineup — Ascension, Warpath, and Dominus"
         fill
-        className="object-cover object-bottom sm:object-center"
+        className="object-cover object-[center_75%] sm:object-center"
         priority
       />
 
       {/* Dark overlay — stronger on mobile for readability over busy product art */}
       <div className="absolute inset-0 bg-black/60 sm:bg-black/50" />
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/80 via-transparent to-bg-primary/90 sm:bg-gradient-to-t sm:from-bg-primary sm:via-transparent sm:to-bg-primary/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-primary/40 via-30% to-bg-primary/90 sm:bg-gradient-to-t sm:from-bg-primary sm:via-transparent sm:to-bg-primary/70" />
 
       {/* Content — sits in the top portion on mobile so products show below */}
       <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-6 pt-24 pb-32 sm:pt-0 sm:pb-0 max-w-4xl mx-auto w-full">

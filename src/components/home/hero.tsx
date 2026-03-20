@@ -2,36 +2,24 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Cosmic background */}
-      <div className="absolute inset-0 cosmic-bg" />
+      {/* Hero background image */}
+      <Image
+        src="/images/hero-bg.jpg"
+        alt="Aeterion Labs product lineup — Ascension, Warpath, and Dominus"
+        fill
+        className="object-cover"
+        priority
+      />
 
-      {/* Nebula effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] animate-pulse-glow" />
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-accent-red/5 rounded-full blur-[100px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-gold/3 rounded-full blur-[150px]" />
-      </div>
-
-      {/* Star field effect */}
-      <div className="absolute inset-0 opacity-30">
-        {Array.from({ length: 50 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-px h-px bg-white rounded-full animate-pulse-glow"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${2 + Math.random() * 3}s`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-bg-primary/70" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">

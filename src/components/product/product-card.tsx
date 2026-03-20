@@ -24,7 +24,7 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <div
-      className={`group bg-bg-card border border-border rounded-sm overflow-hidden transition-all duration-500 hover:border-border-light ${glowColors[product.accentColor]}`}
+      className={`group relative bg-bg-card border border-border rounded-sm overflow-hidden transition-all duration-500 hover:border-border-light ${glowColors[product.accentColor]}`}
     >
       {/* Badges */}
       {product.badges.length > 0 && (
